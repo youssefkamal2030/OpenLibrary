@@ -1,0 +1,36 @@
+﻿@model IEnumerable<LibraryInventory.Models.Book>
+
+@{
+    ViewData["Title"] = "Books List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<a href="@Url.Action("Create")">Create New Book</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.Name</td>
+                <td>@book.Author</td>
+                <td>@book.Description</td>
+                <td>
+                    <a href="@Url.Action("GetBook", new { id = book.Id })">Details</a> |
+                    <a href="@Url.Action("Edit", new { id = book.Id })">Edit</a> |
+                    <a href="/Book/Delete/@book.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,67 @@
+﻿<div class="container mt-5">
+    <div class="jumbotron text-center bg-primary text-white py-5 shadow-lg rounded">
+        <h1>Welcome to Admin DashBoard</h1>
+        <p class="lead">Manage your library's books with ease using the buttons below.</p>
+    </div>
+
+    <div class="row mt-4">
+        <!-- Create Button -->
+        <div class="col-md-3 mb-3">
+            <div class="card text-center shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Add a Book</h5>
+                    <p class="card-text">Add new books to the library's inventory.</p>
+                    <a href="@Url.Action("Create", "Book")" class="btn btn-success btn-block">Create</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Read Button -->
+        <div class="col-md-3 mb-3">
+            <div class="card text-center shadow">
+                <div class="card-body">
+                    <h5 class="card-title">View Books</h5>
+                    <p class="card-text">Browse all books in the library.</p>
+                    <a href="@Url.Action("index", "Book")" class="btn btn-primary btn-block">Read</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Update Button -->
+        <div class="col-md-3 mb-3">
+            <div class="card text-center shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Edit a Book</h5>
+                    <p class="card-text">Modify details of existing books.</p>
+                    <a href="@Url.Action("Index", "Book")" class="btn btn-warning btn-block">Update</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delete Button -->
+        <div class="col-md-3 mb-3">
+            <div class="card text-center shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Remove a Book</h5>
+                    <p class="card-text">Delete books you no longer need in the library.</p>
+                    <a href="@Url.Action("Index", "Book")" class="btn btn-danger btn-block">Delete</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- All Users Button -->
+        <div class="col-md-3 mb-3">
+            <div class="card text-center shadow">
+                <div class="card-body">
+                    <h5 class="card-title">View All Users</h5>
+                    <p class="card-text">See a list of all users registered in the system.</p>
+                    <a href="@Url.Action("GetAllUsers", "Admin")" class="btn btn-info btn-block">View Users</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <p class="text-muted">© 2024 Library Management System. All Rights Reserved.</p>
+    </div>
+</div>
