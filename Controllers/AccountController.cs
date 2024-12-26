@@ -47,7 +47,6 @@ namespace LibraryInventory.Controllers
 
         // POST: /Account/Login
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public IActionResult Login(User user)
         {
             var existingUser = _context.Users

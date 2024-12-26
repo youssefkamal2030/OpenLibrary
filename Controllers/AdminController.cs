@@ -14,13 +14,36 @@ namespace LibraryInventory.Controllers
             return View("AllUsers", Users);
         }
         [HttpPost]
-        public IActionResult SaveChanges(int id ,User user)
+        [HttpPost]
+        public IActionResult SaveChanges(Dictionary<int, string> UserUpdates)
         {
-            User UpdatedUser = _context.Users.FirstOrDefault(u => u.Id == id);
-			UpdatedUser.Type = user.Type;
+            if (UserUpdates != null)
+            {
+                foreach (var update in UserUpdates)
+                {
+                    var user = _context.Users.FirstOrDefault(u => u.Id == update.Key);
+                    if (user != null)
+                    {
+                        user.Type = update.Value;
+                    }
+                }
 
-            _context.SaveChanges();
-            return RedirectToAction("GetAllUsers", "Admin");   
+                _context.SaveChanges();
+            }
+
+            return RedirectToAction("GetAllUsers");
         }
+        [HttpPost]
+        public IActionResult DeleteUser(int id)
+        {
+            var user = _context.Users.FirstOrDefault(u => u.Id == id);
+            if (user != null)
+            {
+                _context.Users.Remove(user);
+                _context.SaveChanges();
+            }
+            return RedirectToAction("GetAllUsers", "Admin");
+        }
+
     }
 }

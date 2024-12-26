@@ -5,12 +5,56 @@
       "PackagePath": "staticwebassets\\LibraryInventory.bundle.scp.css"
     },
     {
+      "Id": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\Images\\GameOfThrones.jpeg",
+      "PackagePath": "staticwebassets\\Images\\GameOfThrones.jpeg"
+    },
+    {
+      "Id": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\Images\\H.jpg",
+      "PackagePath": "staticwebassets\\Images\\H.jpg"
+    },
+    {
+      "Id": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\css\\AllBooks.css",
+      "PackagePath": "staticwebassets\\css\\AllBooks.css"
+    },
+    {
+      "Id": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\css\\Create.css",
+      "PackagePath": "staticwebassets\\css\\Create.css"
+    },
+    {
+      "Id": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\css\\Dashboard.css",
+      "PackagePath": "staticwebassets\\css\\Dashboard.css"
+    },
+    {
+      "Id": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\css\\Delete.css",
+      "PackagePath": "staticwebassets\\css\\Delete.css"
+    },
+    {
+      "Id": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\css\\Details.css",
+      "PackagePath": "staticwebassets\\css\\Details.css"
+    },
+    {
+      "Id": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\css\\Edit.css",
+      "PackagePath": "staticwebassets\\css\\Edit.css"
+    },
+    {
+      "Id": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\css\\Home.css",
+      "PackagePath": "staticwebassets\\css\\Home.css"
+    },
+    {
       "Id": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\js\\ValidationFormLogin.js",
+      "PackagePath": "staticwebassets\\js\\ValidationFormLogin.js"
+    },
+    {
+      "Id": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\js\\ValidationFormRegister.js",
+      "PackagePath": "staticwebassets\\js\\ValidationFormRegister.js"
     },
     {
       "Id": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\js\\site.js",

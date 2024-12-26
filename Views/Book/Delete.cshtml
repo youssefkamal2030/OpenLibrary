@@ -16,7 +16,7 @@
 </div>
 
 
-<form asp-action="Delete" asp-controller="Books" method="post">
+<form asp-action="DeleteConfirmed" asp-controller="Book" method="post">
     <input type="hidden" name="id" value="@Model.Id" />
     <button type="submit" class="btn btn-danger">ConfirmDelete</button>
 </form>

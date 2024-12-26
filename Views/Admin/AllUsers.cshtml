@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<LibraryInventory.Models.User>
 
 @{
-    ViewData["Title"] = "All Users";
+    ViewData["Title"] = "Edit User Types";
 }
 
 <!DOCTYPE html>
@@ -9,49 +9,19 @@
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-    <style>
-        /* Button styling for bottom right corner */
-        .bottom-right-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            padding: 15px 30px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-size: 18px;
-            cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-            .bottom-right-button:hover {
-                background-color: #218838;
-                transform: scale(1.1);
-            }
-
-            .bottom-right-button:focus {
-                outline: none;
-            }
-
-            .bottom-right-button:active {
-                transform: scale(1);
-            }
-    </style>
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="text-center mb-4">All Users</h1>
-        <form method="post" action="@Url.Action("SaveChanges", "User")">
-            <table class="table table-striped table-hover">
+        <h1 class="text-center mb-4">Edit User Types</h1>
+        <form method="post" action="@Url.Action("SaveChanges", "Admin")">
+            <table class="table table-bordered table-hover">
                 <thead class="table-dark">
                     <tr>
                         <th>#</th>
                         <th>Name</th>
                         <th>Email</th>
                         <th>User Type</th>
-                        <th>Books</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -63,52 +33,50 @@
                     }
                     else
                     {
-                     
+                        int counter = 1;
                         foreach (var user in Model)
                         {
+                            
                             <tr>
-                                <td>@user.Id</td>
+                                <td>@counter</td>
                                 <td>@user.Name</td>
                                 <td>@user.Email</td>
                                 <td>
-                                    <select class="form-select" id="Type" name="Type">
-                                        <option value="@user.Type" selected>@user.Type</option>
+                                    <select class="form-select" name="UserUpdates[@user.Id]">
                                         @if (user.Type == "Admin")
                                         {
+                                            <option value="Admin" selected>Admin</option>
                                             <option value="Guest">Guest</option>
                                         }
-                                        else if (user.Type == "Guest")
+                                        else
                                         {
                                             <option value="Admin">Admin</option>
+                                            <option value="Guest" selected>Guest</option>
                                         }
                                     </select>
                                 </td>
                                 <td>
-                                    @if (user.Books?.Any() ?? false)
-                                    {
-                                        <ul class="list-unstyled mb-0">
-                                            @foreach (var book in user.Books)
-                                            {
-                                                <li><i class="fas fa-book"></i> @book.Name</li>
-                                            }
-                                        </ul>
-                                    }
-                                    else
-                                    {
-                                        <span class="text-muted">No books assigned</span>
-                                    }
+                                    <div class="d-flex">
+
+                                        <form method="post" action="@Url.Action("DeleteUser", "Admin")" onsubmit="return confirm('Are you sure you want to delete this user?');">
+                                            <input type="hidden" name="id" value="@user.Id" />
+                                            <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete</button>
+                                        </form>
+
+                                    </div>
                                 </td>
-                                <input type="hidden" name="id" value="@user.Id" />
                             </tr>
-                         
+                            counter++;
+
                         }
                     }
                 </tbody>
             </table>
-
-            <button asp-action="SaveChanges" asp-Controller="Admin" type="submit" class="bottom-right-button">Save Changes</button>
+            <div class="d-flex justify-content-between align-items-center">
+                <a asp-action="GetAllUsers" asp-controller="Admin" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Back</a>
+                <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Save Changes</button>
+            </div>
         </form>
-        <a asp-action="Index" asp-controller="Home" class="btn btn-primary mt-4"><i class="fas fa-arrow-left"></i> Back to Home</a>
     </div>
 </body>
 </html>

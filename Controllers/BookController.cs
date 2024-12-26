@@ -93,7 +93,7 @@ namespace LibraryInventory.Controllers
                 _bookBL.RemoveBook(id);
             }
 
-            return RedirectToAction("Index"); 
+            return RedirectToAction("Index","Book"); 
         }
 
     }

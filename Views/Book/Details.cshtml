@@ -1,14 +1,26 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @model LibraryInventory.Models.Book
 
-<div style="text-align: center;">
-    <h1>@Model.Name</h1>
-    <img src="@Model.Photo" alt="@Model.Name" style="width: 200px; height: auto;" />
-    <p><strong>Author:</strong> @Model.Author</p>
-    <p><strong>Description:</strong> @Model.Description</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css//Details.css" />
+</head>
+<body>
+
+    <div class="container">
+        <h1>@Model.Name</h1>
+        <img src="@Url.Content(Model.Photo.Replace("\\", "/"))" alt="@Model.Name" class="book-image" />
+        <p><span class="strong">Author:</span> @Model.Author</p>
+        <p><span class="strong">Description:</span> @Model.Description</p>
+    </div>
+
+</body>
+</html>

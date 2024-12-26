@@ -5,32 +5,47 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@ViewData["Title"]</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+   <link rel="stylesheet" href="~/css//AllBooks.css"/>
+</head>
+<body>
 
-<a href="@Url.Action("Create")">Create New Book</a>
+    <div class="container">
+        <h2>@ViewData["Title"]</h2>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Author</th>
-            <th>Description</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var book in Model)
-        {
-            <tr>
-                <td>@book.Name</td>
-                <td>@book.Author</td>
-                <td>@book.Description</td>
-                <td>
-                    <a href="@Url.Action("GetBook", new { id = book.Id })">Details</a> |
-                    <a href="@Url.Action("Edit", new { id = book.Id })">Edit</a> |
-                    <a href="/Book/Delete/@book.Id">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+        <a href="@Url.Action("Create")" class="btn-create">Create New Book</a>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Author</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var book in Model)
+                {
+                    <tr>
+                        <td>@book.Name</td>
+                        <td>@book.Author</td>
+                        <td>@book.Description</td>
+                        <td>
+                            <a href="@Url.Action("GetBook", new { id = book.Id })">Details</a> |
+                            <a href="@Url.Action("Edit", new { id = book.Id })">Edit</a> |
+                            <a href="/Book/Delete/@book.Id" >Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
