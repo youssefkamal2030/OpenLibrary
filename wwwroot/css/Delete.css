@@ -1,6 +1,71 @@
-﻿namespace LibraryInventory.wwwroot.css
-{
-    public class Delete
-    {
-    }
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px 30px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    color: #333333;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+div h3 {
+    color: #ff4444;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+div p {
+    color: #555555;
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form .btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #d9534f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form .btn:hover {
+    background-color: #c9302c;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
 }

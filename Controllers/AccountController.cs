@@ -56,19 +56,23 @@ namespace LibraryInventory.Controllers
                 HttpContext.Session.SetString("UserType", existingUser.Type);
                 HttpContext.Session.SetString("UserName", existingUser.Name);
                 HttpContext.Session.SetString("LoggedIn", "1");
-                if (existingUser.Type=="Guest")
+                if (existingUser.Type == "Guest")
                 {
                     return RedirectToAction("Index", "Home");
                 }
-                  else if (existingUser.Type == "Admin")
+                else if (existingUser.Type == "Admin")
                 {
                     bool isAdmin = existingUser.Type == "admin";
 
                     return RedirectToAction("Dashboard", "Home");
                 }
             }
-          
-            ModelState.AddModelError("", "Invalid login attempt.");
+            else 
+            {
+                ModelState.AddModelError("Email", "Invalid login attempt.");
+                return View(user);
+            }
+            
             return View(user);
         }
     }

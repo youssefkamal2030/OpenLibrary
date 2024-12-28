@@ -28,7 +28,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Validate Password
         const passwordInput = document.getElementById("Password");
-        if (passwordInput.value.trim() === "") {
+        if (passwordInput.length < 6) {
+            isValid = false;
+            document.querySelector('[for="Password"]').nextElementSibling.textContent = "Password must be Longer than 6 "
+        }
+        else if (passwordInput.value.trim() === "") {
             isValid = false;
             document.querySelector('[for="Password"]').nextElementSibling.textContent = "Password is required";
         }
