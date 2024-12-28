@@ -3,12 +3,13 @@
 @{
     ViewData["Title"] = "Create New Book";
     Layout = "~/Views/Shared/_Layout.cshtml";
-
 }
 
 <h2>@ViewData["Title"]</h2>
-
-<form asp-action="Create" method="post">
+<head>
+    <link rel="stylesheet" href="~/css/Create.css" />
+</head>
+<form asp-action="Create" method="post" class="custom-form">
     <div class="form-group">
         <label asp-for="Name"></label>
         <input asp-for="Name" class="form-control" />
@@ -24,7 +25,7 @@
         <textarea asp-for="Description" class="form-control"></textarea>
         <span asp-validation-for="Description" class="text-danger"></span>
     </div>
-    <button type="submit" class="btn btn-primary">Create</button>
+    <button type="submit" class="btn">Create</button>
 </form>
 
-<a href="@Url.Action("Index")">Back to List</a>
+<a href="@Url.Action("Index")" class="back-link">Back to List</a>

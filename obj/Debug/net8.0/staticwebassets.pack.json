@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\LibraryInventory.bundle.scp.css"
     },
     {
+      "Id": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\Images\\GameOfThrone1s.jpeg",
+      "PackagePath": "staticwebassets\\Images\\GameOfThrone1s.jpeg"
+    },
+    {
       "Id": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\Images\\GameOfThrones.jpeg",
       "PackagePath": "staticwebassets\\Images\\GameOfThrones.jpeg"
     },
@@ -39,6 +43,10 @@
     {
       "Id": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\css\\Home.css",
       "PackagePath": "staticwebassets\\css\\Home.css"
+    },
+    {
+      "Id": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\css\\Login.css",
+      "PackagePath": "staticwebassets\\css\\Login.css"
     },
     {
       "Id": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\css\\site.css",

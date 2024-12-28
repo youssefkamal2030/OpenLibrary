@@ -1,4 +1,4 @@
-﻿/* Simple CSS for the form */
+﻿/* Simple CSS for the login form */
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
@@ -12,12 +12,12 @@ h2 {
     margin-bottom: 20px;
 }
 
-.custom-form {
+.custom-login-form {
     background: #fff;
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 20px;
-    max-width: 500px;
+    max-width: 400px;
     margin: 0 auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -61,13 +61,14 @@ h2 {
     cursor: pointer;
     display: block;
     margin: 20px auto 0;
+    text-align: center;
 }
 
     .btn:hover {
         background-color: #0056b3;
     }
 
-.back-link {
+.register-link {
     display: block;
     text-align: center;
     margin-top: 20px;
@@ -76,6 +77,6 @@ h2 {
     font-size: 14px;
 }
 
-    .back-link:hover {
+    .register-link:hover {
         text-decoration: underline;
     }

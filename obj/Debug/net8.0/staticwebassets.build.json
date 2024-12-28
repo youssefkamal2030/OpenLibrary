@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9KdMLUvMl3NOjTmhF6kRM06z7DgbHNRjcRFtyqkQY/I=",
+  "Hash": "2hhL2G6arotilvfIrRZzUWa+q9CftISL45y1imm051U=",
   "Source": "LibraryInventory",
   "BasePath": "_content/LibraryInventory",
   "Mode": "Default",
@@ -1328,6 +1328,25 @@
       "OriginalItemSpec": "wwwroot\\css\\Home.css"
     },
     {
+      "Identity": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\css\\Login.css",
+      "SourceId": "LibraryInventory",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\",
+      "BasePath": "_content/LibraryInventory",
+      "RelativePath": "css/Login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Login.css"
+    },
+    {
       "Identity": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\css\\site.css",
       "SourceId": "LibraryInventory",
       "SourceType": "Discovered",
@@ -1364,6 +1383,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\Images\\GameOfThrone1s.jpeg",
+      "SourceId": "LibraryInventory",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\",
+      "BasePath": "_content/LibraryInventory",
+      "RelativePath": "Images/GameOfThrone1s.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\GameOfThrone1s.jpeg"
     },
     {
       "Identity": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\Images\\GameOfThrones.jpeg",
