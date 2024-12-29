@@ -1,29 +1,109 @@
-.layout-default html {
-    font-size: 14px;
-}
-
-.layout-default @media (min-width: 768px) {
-    html
-
-{
-    font-size: 16px;
-}
-
-}
-
-.layout-default .btn:focus,
-.layout-default .btn:active:focus,
-.layout-default .btn-link.nav-link:focus,
-.layout-default .form-control:focus,
-.layout-default .form-check-input:focus {
-    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-.layout-default html {
-    position: relative;
-    min-height: 100%;
-}
-
 .layout-default body {
-    margin-bottom: 60px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Ensure full height of the viewport */
 }
+
+.layout-default .navbar {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Navbar stays at the top */
+    top: 0;
+    z-index: 1000;
+}
+
+    .layout-default .navbar a {
+        text-decoration: none;
+        color: #007bff;
+        margin: 0 10px;
+        font-size: 1em;
+    }
+
+        .layout-default .navbar a:hover {
+            color: #0056b3;
+        }
+
+    .layout-default .navbar .logout {
+        color: #d9534f;
+        border: 1px solid #d9534f;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .layout-default .navbar .logout:hover {
+            background-color: #d9534f;
+            color: #ffffff;
+        }
+
+.layout-default .container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px 30px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    margin-top: 100px; /* Add space below fixed navbar */
+}
+
+.layout-default h2 {
+    color: #333333;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.layout-default div h3 {
+    color: #ff4444;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.layout-default div p {
+    color: #555555;
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.layout-default form {
+    margin-top: 20px;
+}
+
+    .layout-default form .btn {
+        padding: 10px 20px;
+        font-size: 1em;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #d9534f;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .layout-default form .btn:hover {
+            background-color: #c9302c;
+        }
+
+.layout-default a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+    .layout-default a:hover {
+        color: #0056b3;
+    }

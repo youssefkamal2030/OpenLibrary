@@ -32,7 +32,6 @@ namespace LibraryInventory.Controllers
 
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public IActionResult Create(Book book)
         {
             if (ModelState.IsValid)
@@ -56,7 +55,6 @@ namespace LibraryInventory.Controllers
 
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public IActionResult Edit(int id, Book book)
         {
             if (id != book.Id)

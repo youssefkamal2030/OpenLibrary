@@ -14,7 +14,6 @@ namespace LibraryInventory.Controllers
             return View("AllUsers", Users);
         }
         [HttpPost]
-        [HttpPost]
         public IActionResult SaveChanges(Dictionary<int, string> UserUpdates)
         {
             if (UserUpdates != null)

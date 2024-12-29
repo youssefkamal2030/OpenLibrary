@@ -17,7 +17,11 @@
 
     <div class="container">
         <h1>@Model.Name</h1>
-        <img src="@Url.Content(Model.Photo.Replace("\\", "/"))" alt="@Model.Name" class="book-image" />
+        @if(Model.Photo !=null)
+        {
+            <img src="@Url.Content(Model.Photo.Replace("\\", "/"))" alt="@Model.Name" class="book-image" />
+        }
+        
         <p><span class="strong">Author:</span> @Model.Author</p>
         <p><span class="strong">Description:</span> @Model.Description</p>
     </div>

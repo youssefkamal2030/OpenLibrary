@@ -16,7 +16,6 @@ namespace LibraryInventory.Controllers
 
         // POST: /Account/Register
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public IActionResult Register(User user)
         {
             if (_context.Users.Any(u => u.Email == user.Email))

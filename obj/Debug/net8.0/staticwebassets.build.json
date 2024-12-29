@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2hhL2G6arotilvfIrRZzUWa+q9CftISL45y1imm051U=",
+  "Hash": "bM42792USnVYmGqtmrp0/CtjfUmOv3N3cqXu8PN7WVE=",
   "Source": "LibraryInventory",
   "BasePath": "_content/LibraryInventory",
   "Mode": "Default",
@@ -1345,6 +1345,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Login.css"
+    },
+    {
+      "Identity": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\css\\Register.css",
+      "SourceId": "LibraryInventory",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\",
+      "BasePath": "_content/LibraryInventory",
+      "RelativePath": "css/Register.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Register.css"
     },
     {
       "Identity": "E:\\.NET Projects\\LibraryInventory\\wwwroot\\css\\site.css",
